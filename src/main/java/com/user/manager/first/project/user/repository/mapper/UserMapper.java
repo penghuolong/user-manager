@@ -12,7 +12,10 @@ import org.apache.ibatis.annotations.Mapper;
  * @author liujie
  * @since 2019-11-30
  */
+<<<<<<< HEAD
 @Mapper
+=======
+>>>>>>> e191bb8... init-user-manager
 public interface UserMapper extends BaseMapper<User> {
 
 }

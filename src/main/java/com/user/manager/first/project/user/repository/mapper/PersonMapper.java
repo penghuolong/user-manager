@@ -14,8 +14,11 @@ import org.springframework.stereotype.Repository;
  * @author liujie
  * @since 2019-11-30
  */
+<<<<<<< HEAD
 @Mapper
 @Repository
+=======
+>>>>>>> e191bb8... init-user-manager
 public interface PersonMapper extends BaseMapper<Person> {
 
 }

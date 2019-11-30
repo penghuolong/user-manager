@@ -28,7 +28,11 @@ public class DataInitServiceImpl implements IDataInitService {
         List<Person> list = new ArrayList<>();
         for(long i=1;i<number;i++){
             Person person = new Person();
+<<<<<<< HEAD
             long maxNumber = number + max;
+=======
+            long maxNumber = i + max;
+>>>>>>> e191bb8... init-user-manager
             person.setPerscode(String.valueOf(maxNumber));
             person.setDescription(String.valueOf(maxNumber));
             person.setCreatedBy("liujie");
