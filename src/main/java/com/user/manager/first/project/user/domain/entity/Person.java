@@ -31,11 +31,7 @@ public class Person extends BaseEntity {
 
     private String description;
 
-    private String enabledFlag;
 
-    private String createdBy;
-
-    private LocalDateTime creationTime;
 
 
 }

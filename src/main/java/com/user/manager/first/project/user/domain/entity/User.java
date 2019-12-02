@@ -27,12 +27,6 @@ public class User extends BaseEntity {
 
     private String userName;
 
-    private String enabledFlag;
-
-    private LocalDateTime creationTime;
-
-    private String createdBy;
-
     private LocalDateTime lastUpdateTime;
 
     private String lastUpdatedBy;

@@ -2,20 +2,15 @@ server:
   port: 8080
 spring:
   datasource:
-<<<<<<< HEAD
     url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
-=======
-    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC&allowPublicKeyRetrieval=true
->>>>>>> e191bb8... init-user-manager
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: N # 逻辑已删除值(默认为 N)
+      logic-not-delete-value: Y # 逻辑未删除值(默认为 Y)
 
-<<<<<<< HEAD
-#mybatis-plus:
-#  mapper-locations: classpath*:mapper/user/*Mapper.xml
-mybatis:
-  mapper-locations: classpath*:mapper/user/*.xml
-  type-aliases-package: com.user.manager.first.project.user.domain.entity
-=======
->>>>>>> e191bb8... init-user-manager
+
+
