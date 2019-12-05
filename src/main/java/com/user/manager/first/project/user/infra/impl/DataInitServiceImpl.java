@@ -2,6 +2,7 @@ package com.user.manager.first.project.user.infra.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.user.manager.first.project.user.domain.entity.BaseEntity;
 import com.user.manager.first.project.user.domain.entity.Person;
 import com.user.manager.first.project.user.infra.IDataInitService;
 import com.user.manager.first.project.user.infra.IPersonService;
@@ -10,7 +11,6 @@ import com.user.manager.first.project.user.infra.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +22,8 @@ public class DataInitServiceImpl implements IDataInitService {
     private IStudentService studentService;
     @Autowired
     private IUserService userService;
+    @Autowired
+    private BaseEntity baseEntity;
     @Override
     public String initData(Integer number) {
         Long max = getPersonMax();
@@ -31,7 +33,7 @@ public class DataInitServiceImpl implements IDataInitService {
             long maxNumber = i + max;
             person.setPerscode(String.valueOf(maxNumber));
             person.setDescription(String.valueOf(maxNumber));
-//            person.setCreatedBy("liujie");
+            person.setCreatedBy(baseEntity.getCreatedBy());
 //            person.setCreationTime(LocalDateTime.now());
 //            person.setEnabledFlag("Y");
             list.add(person);
